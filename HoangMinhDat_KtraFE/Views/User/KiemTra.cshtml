@@ -1,0 +1,105 @@
+﻿@{
+    Layout = "~/Views/Shared/Masterlayout.cshtml";
+}
+<html>
+<head>
+    <title>KiemTra</title>
+</head>
+<body>
+    <script>
+        function validateForm() {
+            // Lấy các giá trị từ các trường nhập liệu
+            const name = document.querySelector('.Diachi[type="text"]').value;
+            const phone = document.querySelectorAll('.Diachi[type="text"]')[1].value;
+            const city = document.querySelectorAll('.Diachi')[2].value;
+            const district = document.querySelectorAll('.Diachi')[3].value;
+            const ward = document.querySelectorAll('.Diachi')[4].value;
+            const address = document.querySelector('.Diachi[placeholder="Ví dụ: 52, đường Trần Hưng Đạo"]').value;
+
+            // Xóa thông báo lỗi trước đó
+            clearErrors();
+
+            let valid = true;
+
+            // Kiểm tra họ tên (chỉ cho phép chữ cái và khoảng trắng)
+            if (!/^[a-zA-Z\s]+$/.test(name)) {
+                showError('nameError', 'Họ và tên chỉ được chứa chữ cái và khoảng trắng.', 'name');
+                valid = false;
+            }
+
+            // Kiểm tra số điện thoại (chỉ cho phép số, có độ dài từ 10-11)
+            if (!/^\d{10,11}$/.test(phone)) {
+                showError('phoneError', 'Số điện thoại không hợp lệ. Vui lòng nhập số từ 10 đến 11 chữ số.', 'phone');
+                valid = false;
+            }
+
+            // Kiểm tra tỉnh/thành phố
+            if (city === "") {
+                showError('cityError', 'Vui lòng chọn tỉnh/thành phố.', 'city');
+                valid = false;
+            }
+
+            // Kiểm tra quận/huyện
+            if (district === "") {
+                showError('districtError', 'Vui lòng chọn quận/huyện.', 'district');
+                valid = false;
+            }
+
+            // Kiểm tra phường/xã
+            if (ward === "") {
+                showError('wardError', 'Vui lòng chọn phường/xã.', 'ward');
+                valid = false;
+            }
+
+            // Kiểm tra địa chỉ (không được để trống)
+            if (!address) {
+                showError('addressError', 'Địa chỉ không được để trống.', 'address');
+                valid = false;
+            }
+
+            // Nếu tất cả đều hợp lệ, bạn có thể thực hiện hành động tiếp theo (ví dụ: gửi biểu mẫu)
+            if (valid) {
+                alert("Tất cả dữ liệu hợp lệ!");
+                // document.querySelector('form').submit(); // Bỏ comment để gửi biểu mẫu
+            }
+        }
+
+        function showError(elementId, message, type) {
+            const errorElement = document.getElementById(elementId);
+            errorElement.textContent = message;
+
+            // Đặt focus vào trường dữ liệu sai
+            switch (type) {
+                case 'name':
+                    document.querySelector('.Diachi[type="text"]').focus();
+                    break;
+                case 'phone':
+                    document.querySelectorAll('.Diachi[type="text"]')[1].focus();
+                    break;
+                case 'city':
+                    document.querySelectorAll('.Diachi')[2].focus();
+                    break;
+                case 'district':
+                    document.querySelectorAll('.Diachi')[3].focus();
+                    break;
+                case 'ward':
+                    document.querySelectorAll('.Diachi')[4].focus();
+                    break;
+                case 'address':
+                    document.querySelector('.Diachi[placeholder="Ví dụ: 52, đường Trần Hưng Đạo"]').focus();
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        function clearErrors() {
+            const errorElements = document.querySelectorAll('.error-message');
+            errorElements.forEach(element => {
+                element.textContent = '';
+            });
+        }
+    </script>
+</body>
+</html>
+

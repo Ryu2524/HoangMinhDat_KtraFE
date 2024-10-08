@@ -1,0 +1,311 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/Style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link 
+</head>
+<style>
+    .error-message {
+        color: red; /* Đặt màu chữ thành đỏ */
+    }
+    #Top {
+        display: flex; /* Sử dụng Flexbox để căn chỉnh các phần tử */
+        align-items: center; /* Căn giữa theo chiều dọc */
+        justify-content: center; /* Căn giữa theo chiều ngang */
+        height: 50px;
+        background-color: #f0fcf4;
+        padding: 0 10px; /* Thêm khoảng cách bên trái và bên phải */
+    }
+
+        #Top img {
+            margin-left: 10px; /* Thêm khoảng cách giữa đoạn văn và hình ảnh */
+            max-height: 40px; /* Giới hạn chiều cao của hình ảnh */
+        }
+
+        #Top p {
+            text-align: center; /* Căn giữa đoạn văn */
+            margin: 0; /* Loại bỏ khoảng cách mặc định của đoạn văn */
+            color:forestgreen;
+        }
+   
+    #Head {
+        height: 100px;
+        display: flex;
+    }
+
+    #texttk input {
+        width: 500px;
+    }
+
+    #texttk button {
+        position: absolute;
+        margin-top: 20px;
+        transform: translateY(-50%); /* Căn giữa hoàn hảo */
+        background: transparent;
+        color: #2439ef;
+        border: 1px solid rgba(0, 0, 0, 0.5); /* Viền mờ (màu đen với độ mờ 50%) */
+    }
+
+    #o3 {
+        display: flex;
+    }
+
+    #shoppingcart button {
+        width: 30px;
+        height: 30px;
+        background: transparent;
+        border: 0;
+    }
+
+    #shoppingcart {
+        margin-top: -5px;
+    }
+
+    #camket {
+        color: blue;
+    }
+
+    #Container {
+        display: block;
+        border: none;
+    }
+
+    #Box {
+        background-color: #f5f5fa;
+        margin: 50px 100px;
+        padding-left:100px;
+        padding-top:30px;
+    }
+
+    #themdiachimoi {
+        color: blue;
+    }
+
+    form {
+        padding-left:600px;
+        margin-top:20px;
+        padding-right:50px;
+        padding-top:40px;
+        border-radius: 5px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        max-width: 500px;
+        background-color:#dbdbdb;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    select,
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    textarea {
+        resize: vertical;
+    }
+    #loaidiachi{
+        display:flex;
+    }
+    button {
+        background-color: #28a745;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-right: 10px;
+    }      
+        button:hover {
+            opacity: 0.9;
+        }
+    input[type="radio"] {
+        margin-right: 5px;
+    }
+    #button1{
+        background-color:white;
+        color:black;
+        width:150px;
+    }
+    #button2{
+        background-color:dodgerblue;
+        color:white;
+    }
+</style>
+    
+<body>
+    <div>
+        <div id="Top">
+            <p>Free ship đơn từ 45k, giảm nhiều hơn cùng</p>
+            <img src="~/Content/IMG/image.png" />
+        </div>
+        <div id="Head">
+            <div> <img height="70" src="~/Content/IMG/image2.png" /></div>
+            <div>
+                <div id="texttk">
+                    <input type="text" placeholder="100% hàng thật " />
+                    <button>Tìm Kiếm </button>
+                </div>
+                <br />
+                <div>
+                    <a>điện gia dụng </a>&emsp;
+                    <a>xe cộ </a>&emsp;
+                    <a>mẹ &amp; bé </a>&emsp;
+                    <a>khỏe đẹp </a>&emsp;
+                    <a>nhà cửa </a>&emsp;
+                    <a>sách </a>&emsp;
+                    <a>thể thao </a>&emsp;
+                    <a>oppo</a>&emsp;
+                    <a>iphone 15 promax </a>&emsp;
+                    <a>iphone 14 </a>&emsp;
+                    <a> xiaomi</a>&emsp;
+                    <a>a17k </a>&emsp;
+                </div>
+            </div>
+            <div>
+                <div id="o3">
+                    <div>
+                        <i class="fas fa-home"></i>
+                        <a> Trang chủ</a>
+                        &emsp;
+                    </div>
+                    <div>
+                        <i class="far fa-smile"></i>
+                        <a>Tài khoản</a>
+                        &emsp;
+                    </div>
+                    <div id="shoppingcart">
+                        <button><i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+                <div>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <a>Địa chỉ: Q1 P.Bến Nghé Hồ Chí Minh</a>
+                </div>
+            </div>
+        </div>
+        <div id="Container">
+            <div id="TopBody">
+                <b id="camket">Cam kết </b>&emsp;
+                <i class="fas fa-check-circle"></i>
+                <a>100% hàng thật </a>&emsp;
+                <i class="fas fa-undo"></i>
+                <a>Hoàn 200% nếu hàng giả </a>&emsp;
+                <i class="fas fa-box"></i>
+                <a>30 ngày đổi trả </a>&emsp;
+                <i class="fas fa-rocket"></i>
+                <a>Giao nhanh 2h </a>&emsp;
+                <i class="fas fa-money-bill-alt"></i>
+                <a>Giá siêu rẻ </a>&emsp;
+                <i class="fas fa-shipping-fast"></i>
+                <a>Freeship mọi đơn </a>&emsp;
+            </div>
+            <div id="Box">
+                <h2>2.Địa chỉ giao hàng </h2>
+                <a>Bạn muốn giao hàng đến địa chỉ khác?</a>
+                <a id="themdiachimoi">Thêm địa chỉ giao hàng mới</a>
+                <div id="">
+                    <form>
+                        <label>Họ Tên</label>
+                        <input class="Diachi" type="text" placeholder="Nhập Họ và Tên" />
+                        <div id="errorMessages" style="color:red;"></div>
+                        <div id="nameError" class="error-message"></div>
+                        <br />
+
+                        <label>Điện thoại di động</label>
+                        <input class="Diachi" type="text" placeholder="Nhập số điện thoại" />
+                        <div id="errorMessages" style="color:red;"></div>
+                        <div id="phoneError" class="error-message"></div>
+                        <br />
+
+                        <label>Tỉnh/Thành Phố</label>
+                        <select class="Diachi">
+                            <option value="">Chọn Tỉnh/Thành Phố</option>
+                            <option value="Hà Nội">Hà Nội</option>
+                            <option value="Hồ Chí Minh">Hồ Chí Minh</option>
+                            <option value="Đà Nẵng">Đà Nẵng</option>
+                            <option value="Hải Phòng">Hải Phòng</option>
+                            <option value="Cần Thơ">Cần Thơ</option>
+                        </select>
+                        <div id="errorMessages" style="color:red;"></div>
+                        <div id="cityError" class="error-message"></div>
+                        <br />
+
+                        <label>Quận/Huyện</label>
+                        <select class="Diachi">
+                            <option value="">Chọn Quận/Huyện</option>
+                            <option value="Quận 1">Quận 1 </option>
+                            <option value="Quận 3">Quận 3</option>
+                            <option value="Quận 4">Quận 4</option>
+                            <option value="Quận 7">Quận 7</option>
+                            <option value="Gò Vấp">Gò Vấp</option>
+                        </select>
+                        <div id="errorMessages" style="color:red;"></div>
+                        <div id="districtError" class="error-message"></div>
+                        <br />
+
+                        <label>Phường/Xã</label>
+                        <select class="Diachi">
+                            <option value="">Chọn Phường/Xã</option>
+                            <option value="3">P.3</option>
+                            <option value="5">P.5</option>
+                            <option value="8">P.8</option>
+                            <option value="10">P.10</option>
+                            <option value="11">P.11</option>
+                            <option value="12">P.12</option>
+                            <option value="13">P.13</option>
+                        </select>
+                        <div id="errorMessages" style="color:red;"></div>
+                        <div id="wardError" class="error-message"></div>
+                        <br />
+
+                        <label>Địa chỉ</label>
+                        <div>
+                            <textarea class="Diachi" placeholder="Ví dụ: 52, đường Trần Hưng Đạo" rows="4" cols="50"></textarea><br />
+                            <div id="addressError" class="error-message"></div>
+                            <label>Để nhận hàng thuận tiện hơn, bạn vui lòng cho Tiki biết loại địa chỉ</label>
+                            <div>
+
+                                <div id="loaidiachi">
+                                    <label>Loại địa chỉ</label>&emsp;
+                                    <input type="radio" name="loai-dia-chi" value="Rieng" id="rieng" />
+                                    <label for="rieng">Riêng / Chung cư</label>&emsp;
+                                    <br />
+                                    <input type="radio" name="loai-dia-chi" value="Co-quan" id="co-quan" />
+                                    <label for="co-quan">Cơ quan</label>
+                                    <br />
+                                </div>
+                                <input type="checkbox" name="loai-dia-chi" value="Khac" id="khac" />
+                                <label for="khac">Sử dụng địa chỉ làm mặc định</label>
+                            </div>
+                        </div>
+                        <br />
+                        <button type="button" onclick="validateForm()"> Kiểm Tra</button>
+                        <button id="button1" type="button">Hủy bỏ</button>
+                        <button id="button2" type="submit">Giao đến địa chỉ này</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div>
+            @RenderBody()
+        </div>
+        <div id="Bottom">
+
+        </div>
+    </div>   
+</body>
+</html>
